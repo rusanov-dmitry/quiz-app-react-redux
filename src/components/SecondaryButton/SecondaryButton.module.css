@@ -1,0 +1,23 @@
+.button {
+    display: block;
+    width: 14rem;
+    margin: 0 auto;
+}
+
+.button a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-family: "Fira Code";
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    margin: 1.125rem 1.5rem;
+    border-bottom: none;
+}
+
+.button a:hover {
+    border-bottom: 0.25rem solid white;
+    transition: border-bottom-color 80ms ease-out;
+    transition: border-bottom-width 80ms ease-out;
+}

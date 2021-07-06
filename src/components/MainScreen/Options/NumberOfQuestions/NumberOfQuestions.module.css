@@ -1,0 +1,39 @@
+.numOfQuestions {
+
+}
+
+.numOfQuestions h2 {
+    font-family: "Fira Code";
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: white;
+    text-align: start;
+    margin: 0rem 0rem 1.25rem 0rem;
+}
+
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputNumber {
+    background-color: #65438F;
+    vertical-align: top;
+    outline: none;
+    padding: 1rem;
+    width: 10.5rem;
+    box-sizing: border-box;
+    border: 1px solid #65438F;
+    font-family: "Fira Code";
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #C69AFF;
+}
+
+.inputNumber::placeholder {
+    color: #C69AFF;
+    font-family: "Fira Code";
+    font-size: 1.125rem;
+    font-weight: 500;
+}

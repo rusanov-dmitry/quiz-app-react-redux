@@ -1,0 +1,12 @@
+.categories {
+    margin-left: 3.75rem;
+}
+
+.categories h2 {
+    font-family: "Fira Code";
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: white;
+    text-align: start;
+    margin: 0rem;
+}

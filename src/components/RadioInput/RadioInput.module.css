@@ -1,0 +1,43 @@
+.radioButton {
+    display: block;
+}
+
+.customRadio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.customRadio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-family: "Fira Code";
+    font-size: 1rem;
+    font-weight: 500;
+    color: #C69AFF;
+    margin-bottom: 0.65rem;
+}
+
+.customRadio+label::before {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-color: #65438F;
+    border: 0.25rem solid #65438F;
+    border-radius: 50%;
+    margin-right: 0.625rem;
+}
+
+.customRadio:checked+label::before {
+    border: 0.25rem solid #65438F;
+    background-color: white;
+}
+
+.customRadio:not(:disabled):not(:checked)+label:hover::before {
+    border: 0.25rem solid #C69AFF;
+    background-color: #C69AFF;
+}
