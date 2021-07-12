@@ -13,6 +13,7 @@
 
 .gridContainer {
     display: grid;
-    grid-template: 100% / 19.75rem 27.875rem;
-    margin-top: 7.5rem;
+    grid-template: 100% / 19.75rem 29rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }

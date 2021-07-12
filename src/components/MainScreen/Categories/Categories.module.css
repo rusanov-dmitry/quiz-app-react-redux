@@ -10,3 +10,32 @@
     text-align: start;
     margin: 0rem;
 }
+
+.categoriesList {
+    margin-top: 2.5rem;
+    height: 28rem;
+    overflow-y: scroll;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: transparent;
+    margin-left: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #573E76;
+    border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #472F63;
+}

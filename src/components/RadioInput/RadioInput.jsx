@@ -4,8 +4,8 @@ import styles from './RadioInput.module.css'
 const RadioInput = (props) => {
     return (
         <div className={styles.radioButton}>
-            <input type="radio" id='radio1' name='opop' value='any' className={styles.customRadio}/>
-            <label htmlFor="radio1">{props.typeName}</label>
+            <input type="radio" id={props.id} name={props.name} value={props.value} className={styles.customRadio}/>
+            <label htmlFor={props.id}>{props.label}</label>
         </div>
     )
 }
