@@ -4,7 +4,8 @@ import styles from './Category.module.css';
 const Category = (props) => {
     return (
         <div className={styles.categoryBox}>
-            <p className={styles.categoryName}>{props.categoryName}</p>
+            <input type="radio" id={props.id} name={props.name} value={props.value}/>
+            <label htmlFor={props.id}>{props.categoryName}</label>
         </div>
     )
 }

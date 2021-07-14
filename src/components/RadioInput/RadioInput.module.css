@@ -12,11 +12,12 @@
     display: inline-flex;
     align-items: center;
     user-select: none;
-    font-family: "Fira Code";
+    font-family: "Fira Code", sans-serif;
     font-size: 1rem;
     font-weight: 500;
     color: #C69AFF;
     margin-bottom: 0.65rem;
+    cursor: pointer;
 }
 
 .customRadio+label::before {
