@@ -14,7 +14,7 @@ class OptionsContainer extends React.Component {
     }
 
     render() {
-        return <Options onNumberChanged={this.onNumberChanged} />
+        return <Options onNumberChanged={this.onNumberChanged} numberOfQuestions={this.props.numberOfQuestions} />
     }
 }
 

@@ -11,11 +11,11 @@ let initialState = {
 const optionsReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_NUMBER_OF_QUESTIONS:
-            return {...state, numberOfQuestions: action.numberOfQuestions}
+            return {...state, numberOfQuestions: action.numberOfQuestions};
         case SET_ANSWERS_TYPE:
-            return {...state, answersType: action.answersType}
+            return {...state, answersType: action.answersType};
         case SET_DIFFICULTY:
-            return {...state, difficulty: action.difficulty}
+            return {...state, difficulty: action.difficulty};
         default:
             return state;
     }
