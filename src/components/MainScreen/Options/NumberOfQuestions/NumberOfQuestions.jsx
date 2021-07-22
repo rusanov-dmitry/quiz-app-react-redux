@@ -13,9 +13,9 @@ const NumberOfQuestions = (props) => {
         <div className={styles.numOfQuestions}>
             <h2>Number of questions</h2>
             <div className={styles.options}>
-                <RadioInput id='num1' name='num' value='5' label='5' onCheck={props.onNumberChanged} />
-                <RadioInput id='num2' name='num' value='10' label='10' onCheck={props.onNumberChanged} />
-                <RadioInput id='num3' name='num' value='15' label='15' onCheck={props.onNumberChanged} />
+                <RadioInput id='num1' name='num' value='5' label='5' onCheck={onNumberChanged} />
+                <RadioInput id='num2' name='num' value='10' label='10' onCheck={onNumberChanged} />
+                <RadioInput id='num3' name='num' value='15' label='15' onCheck={onNumberChanged} />
             </div>
         </div>
 

@@ -7,9 +7,9 @@ import DifficultyOfQuestions from './DifficultyOfQuestions/DifficultyOfQuestions
 const Options = (props) => {
     return (
         <div className={styles.options}>
-            <NumberOfQuestions onNumberChanged={props.onNumberChanged} numberOfQuestions={props.numberOfQuestions} />
-            <TypeOfQuestions />
-            <DifficultyOfQuestions />
+            <NumberOfQuestions onNumberChanged={props.onNumberChanged} />
+            <TypeOfQuestions onTypeChanged={props.onTypeChanged} />
+            <DifficultyOfQuestions onDifficultyChanged={props.onDifficultyChanged} />
         </div>
     )
 }

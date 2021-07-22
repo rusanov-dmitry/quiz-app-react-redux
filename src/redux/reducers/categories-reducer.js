@@ -3,7 +3,7 @@ const CHOOSE_CATEGORY = 'CHOOSE_CATEGORY';
 
 let initialState = {
     categoriesList: [],
-    category: ''
+    category: 'any'
 };
 
 const categoriesReducer = (state = initialState, action) => {

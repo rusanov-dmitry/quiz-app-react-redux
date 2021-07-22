@@ -3,7 +3,7 @@ const SET_ANSWERS_TYPE = 'SET_ANSWERS_TYPE';
 const SET_DIFFICULTY = 'SET_DIFFICULTY';
 
 let initialState = {
-    numberOfQuestions: '0',
+    numberOfQuestions: '5',
     answersType: 'any',
     difficulty: 'any'
 };

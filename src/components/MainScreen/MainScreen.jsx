@@ -10,7 +10,7 @@ const MainScreen = (props) => {
             <h1>TestSelf</h1>
             <div className={styles.gridContainer}>
                 <OptionsContainer />
-                <Categories />
+                <Categories categoriesList={props.categoriesList} />
             </div>
             <PrimaryButton itemPath='/quiz' itemName='Start quiz' />
         </div>

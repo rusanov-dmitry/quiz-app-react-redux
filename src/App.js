@@ -2,13 +2,13 @@ import React from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import WelcomeScreen from './components/WelcomeScreen/WelcomeScreen';
-import MainScreen from './components/MainScreen/MainScreen';
+import MainScreenContainer from './components/MainScreen/MainScreenContainer';
 
 const App = (props) => {
     return (
         <div className='app-wrapper'>
             <Route path='/welcome' render={ () => <WelcomeScreen /> } />
-            <Route path='/main' render={ () => <MainScreen /> } />
+            <Route path='/main' render={ () => <MainScreenContainer /> } />
         </div>
     );
 }
