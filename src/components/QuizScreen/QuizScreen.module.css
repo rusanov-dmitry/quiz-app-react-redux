@@ -1,0 +1,12 @@
+.content {
+    
+}
+
+.content h2 {
+    font-family: "Fira Code";
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: white;
+    text-align: start;
+    margin: 0rem 0rem 1.25rem 0rem;
+}

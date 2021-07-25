@@ -7,6 +7,7 @@ import { setCategoriesList, chooseCategory } from '../../redux/reducers/categori
 class MainScreenContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.onCategoryChanged = this.onCategoryChanged.bind(this);
     }
 
     componentDidMount() {
@@ -15,9 +16,13 @@ class MainScreenContainer extends React.Component {
         });
     }
 
+    onCategoryChanged(category) {
+        this.props.chooseCategory(category);
+    }
+
     render() {
         return (
-            <MainScreen categoriesList={this.props.categoriesList} />
+            <MainScreen categoriesList={this.props.categoriesList} onCategoryChanged={this.onCategoryChanged} />
         )
     }
 }
