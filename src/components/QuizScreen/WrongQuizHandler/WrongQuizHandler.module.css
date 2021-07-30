@@ -1,0 +1,9 @@
+.content {
+    margin: 15rem auto;
+}
+
+.content h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    line-height: 3rem;
+}
