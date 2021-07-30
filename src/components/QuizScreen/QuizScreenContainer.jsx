@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import QuizScreen from './QuizScreen';
-import { setQuestions, addPoint } from '../../redux/reducers/quiz-reducer';
+import { setQuestions, addPoint, changeFetchStatus } from '../../redux/reducers/quiz-reducer';
 import axios from 'axios';
+import Loader from './Loader/Loader';
 
 class QuizScreenContainer extends React.Component {
     constructor(props) {
@@ -10,16 +11,20 @@ class QuizScreenContainer extends React.Component {
     }
 
     componentDidMount() {
+        this.props.changeFetchStatus(true);
         axios.get(
             `https://opentdb.com/api.php?amount=${this.props.numberOfQuestions}&category=${this.props.category}&difficulty=${this.props.difficulty}&type=${this.props.answersType}`
         ).then(response => {
+            this.props.changeFetchStatus(false);
             this.props.setQuestions(response.data.results);
         });
     }
 
     render() {
         return (
-            <QuizScreen questions={this.props.questions} />
+            <>
+                {this.props.isFetching ? <Loader /> : <QuizScreen questions={this.props.questions} />}
+            </>
         )
     }
 }
@@ -30,9 +35,10 @@ const mapStateToProps = (state) => {
         numberOfQuestions: state.optionsTab.numberOfQuestions,
         answersType: state.optionsTab.answersType,
         difficulty: state.optionsTab.difficulty,
-        category: state.categoriesTab.category
+        category: state.categoriesTab.category,
+        isFetching: state.quizTab.isFetching
     }
 }
 
 export default connect(mapStateToProps, {
-    setQuestions, addPoint})(QuizScreenContainer);
+    setQuestions, addPoint, changeFetchStatus})(QuizScreenContainer);
