@@ -7,6 +7,7 @@ const Question = (props) => {
     let onAnswerChoosed = (e) => {
         let answer = e.target.value;
         props.onAnswerChoosed(answer, props.correctAnswer);
+        props.goToNextQuestion();
     }
 
     let randomIndex = Math.floor(Math.random() * 4);

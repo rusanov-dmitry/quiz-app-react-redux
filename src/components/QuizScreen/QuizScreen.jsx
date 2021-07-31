@@ -12,13 +12,14 @@ const QuizScreen = (props) => {
                         correctAnswer={element.correct_answer} 
                         incorrectAnswers={element.incorrect_answers}
                         numOfQuestions={props.questions.length}
-                        onAnswerChoosed={props.onAnswerChoosed} />
+                        onAnswerChoosed={props.onAnswerChoosed}
+                        goToNextQuestion={props.goToNextQuestion} />
     });
 
     return (
         <div className={styles.content}>
             <h2>{typeof props.questions[0] !== 'undefined' ? props.questions[0].category : <WrongQuizHandler />}</h2>
-            {questionElements}
+            {questionElements[props.currentQuestion]}
         </div>
     )
 }
