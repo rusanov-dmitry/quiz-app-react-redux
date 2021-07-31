@@ -12,7 +12,6 @@ const DifficultyOfQuestions = (props) => {
     return (
         <div className={styles.diffOfQuestions}>
             <h2>Difficulty</h2>
-            <RadioInput id='diff1' name='difficulty' value='any' label='Any' onCheck={onDifficultyChanged} />
             <RadioInput id='diff2' name='difficulty' value='easy' label='Easy' onCheck={onDifficultyChanged} />
             <RadioInput id='diff3' name='difficulty' value='medium' label='Medium' onCheck={onDifficultyChanged} />
             <RadioInput id='diff4' name='difficulty' value='hard' label='Hard' onCheck={onDifficultyChanged} />

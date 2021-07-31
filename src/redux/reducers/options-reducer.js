@@ -4,8 +4,8 @@ const SET_DIFFICULTY = 'SET_DIFFICULTY';
 
 let initialState = {
     numberOfQuestions: '5',
-    answersType: 'any',
-    difficulty: 'any'
+    answersType: '',
+    difficulty: ''
 };
 
 const optionsReducer = (state = initialState, action) => {
