@@ -1,0 +1,29 @@
+.content {
+    margin-top: 14rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.content .mainHeader {
+    font-family: "Fira Code";
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    text-shadow: #702B9B 0.5rem 0.5rem;
+    margin: 2.5rem 0;
+}
+
+.content .subheader {
+    font-family: "Fira Code";
+    font-size: 2.25rem;
+    font-weight: 400;
+    color: white;
+    text-shadow: #702B9B 0.5rem 0.5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.subheader span {
+    font-size: 3rem;
+    font-weight: 700;
+}

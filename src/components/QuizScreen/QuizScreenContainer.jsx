@@ -1,7 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import QuizScreen from './QuizScreen';
-import { setQuestions, addPoint, changeFetchStatus, goToNextQuestion } from '../../redux/reducers/quiz-reducer';
+import { 
+    setQuestions, 
+    addPoint, 
+    changeFetchStatus, 
+    goToNextQuestion, 
+    restoreCorrectAnswers, 
+    restoreCurrentQuestion 
+} from '../../redux/reducers/quiz-reducer';
 import axios from 'axios';
 import Loader from './Loader/Loader';
 
@@ -19,6 +26,9 @@ class QuizScreenContainer extends React.Component {
             this.props.changeFetchStatus(false);
             this.props.setQuestions(response.data.results);
         });
+        
+        this.props.restoreCorrectAnswers();
+        this.props.restoreCurrentQuestion();
     }
 
     onAnswerChoosed = (choosedAnswer, correctAnswer) => {
@@ -33,7 +43,8 @@ class QuizScreenContainer extends React.Component {
                 {this.props.isFetching ? <Loader /> : <QuizScreen questions={this.props.questions} 
                                                                 onAnswerChoosed={this.onAnswerChoosed}
                                                                 goToNextQuestion={this.props.goToNextQuestion}
-                                                                currentQuestion={this.props.currentQuestion} />}
+                                                                currentQuestion={this.props.currentQuestion}
+                                                                correctAnswers={this.props.correctAnswers} />}
             </>
         )
     }
@@ -53,4 +64,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps, {
-    setQuestions, addPoint, changeFetchStatus, goToNextQuestion})(QuizScreenContainer);
+    setQuestions, addPoint, changeFetchStatus, goToNextQuestion, restoreCorrectAnswers, restoreCurrentQuestion})(QuizScreenContainer);
