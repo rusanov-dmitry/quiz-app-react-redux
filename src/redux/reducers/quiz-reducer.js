@@ -4,7 +4,7 @@ const CHANGE_FETCH_STATUS = 'CHANGE_FETCH_STATUS';
 
 let initialState = {
     questions: [],
-    correctAnswers: '0',
+    correctAnswers: 0,
     isFetching: false
 };
 
@@ -13,7 +13,7 @@ const quizReducer = (state = initialState, action) => {
         case SET_QUESTIONS:
             return {...state, questions: [...action.questions]};
         case ADD_POINT:
-            return {...state, correctAnswers: state.correctAnswers+1};
+            return {...state, correctAnswers: state.correctAnswers + 1};
         case CHANGE_FETCH_STATUS:
             return {...state, isFetching: action.status};
         default:

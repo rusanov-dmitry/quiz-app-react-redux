@@ -8,6 +8,7 @@ import Loader from './Loader/Loader';
 class QuizScreenContainer extends React.Component {
     constructor(props) {
         super(props);
+        this.onAnswerChoosed = this.onAnswerChoosed.bind(this);
     }
 
     componentDidMount() {
@@ -20,10 +21,16 @@ class QuizScreenContainer extends React.Component {
         });
     }
 
+    onAnswerChoosed = (choosedAnswer, correctAnswer) => {
+        if (choosedAnswer === correctAnswer) {
+            this.props.addPoint();
+        }
+    }
+
     render() {
         return (
             <>
-                {this.props.isFetching ? <Loader /> : <QuizScreen questions={this.props.questions} />}
+                {this.props.isFetching ? <Loader /> : <QuizScreen questions={this.props.questions} onAnswerChoosed={this.onAnswerChoosed} />}
             </>
         )
     }
@@ -32,11 +39,12 @@ class QuizScreenContainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         questions: state.quizTab.questions,
+        isFetching: state.quizTab.isFetching,
+        correctAnswers: state.quizTab.correctAnswers,
         numberOfQuestions: state.optionsTab.numberOfQuestions,
         answersType: state.optionsTab.answersType,
         difficulty: state.optionsTab.difficulty,
-        category: state.categoriesTab.category,
-        isFetching: state.quizTab.isFetching
+        category: state.categoriesTab.category
     }
 }
 

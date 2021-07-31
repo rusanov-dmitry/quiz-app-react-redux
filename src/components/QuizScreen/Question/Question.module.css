@@ -1,0 +1,27 @@
+.content {
+    width: 53rem;
+    margin: auto;
+}
+
+.content p {
+    font-family: "Fira Code", sans-serif;
+    font-size: 1.375rem;
+    font-weight: 500;
+    color: white;
+    text-align: start;
+    margin: 0;
+}
+
+.questionTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+
+.counter {
+    font-family: "Fira Code", sans-serif;
+    font-weight: 700;
+    font-size: 1.375rem;
+    color: #C69AFF;
+    margin-left: 3rem;
+}
