@@ -1,5 +1,6 @@
 import React from 'react';
 import PrimaryButton from '../PrimaryButton/PrimaryButton';
+import WrongQuizHandler from '../QuizScreen/WrongQuizHandler/WrongQuizHandler';
 import styles from './ResultScreen.module.css';
 
 const ResultScreen = (props) => {
@@ -16,6 +17,10 @@ const ResultScreen = (props) => {
     }
 
     return (
+        isNaN(accuracy)
+        ?
+        <WrongQuizHandler />
+        :
         <div className={styles.content}>
                 <h1 className={styles.mainHeader}>{titleText}</h1>
                 <h2 className={styles.subheader}>You answered <span>{accuracy}%</span> of the questions correctly</h2>

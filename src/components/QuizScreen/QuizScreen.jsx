@@ -2,7 +2,6 @@ import React from 'react';
 import ResultScreen from '../ResultScreen/ResultScreen';
 import Question from './Question/Question';
 import styles from './QuizScreen.module.css';
-import WrongQuizHandler from './WrongQuizHandler/WrongQuizHandler';
 
 const QuizScreen = (props) => {
 
@@ -23,7 +22,7 @@ const QuizScreen = (props) => {
                 props.currentQuestion < props.questions.length
                 ?
                 <div>
-                    <h2>{typeof props.questions[0] !== 'undefined' ? props.questions[0].category : <WrongQuizHandler />}</h2>
+                    <h2>{typeof props.questions[0] !== 'undefined' ? props.questions[0].category : <ResultScreen />}</h2>
                     {questionElements[props.currentQuestion]}
                 </div>
                 :
