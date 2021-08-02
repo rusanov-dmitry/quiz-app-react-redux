@@ -15,7 +15,24 @@ let initialState = {
 const quizReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_QUESTIONS:
-            return {...state, questions: [...action.questions]};
+            debugger;
+            let questionCopy = JSON.parse(JSON.stringify(action.questions));
+            const htmlEntities = () => {
+                questionCopy.forEach(element => {
+                    element.question.replace(/&amp;/g, '&')
+                    .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+
+                    element.correct_answer.replace(/&amp;/g, '&')
+                    .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+
+                    element.incorrect_answers.forEach(answer => {
+                        answer.replace(/&amp;/g, '&')
+                        .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+                    })
+                });
+            }
+            htmlEntities();
+            return {...state, questions: [...questionCopy]};
         case ADD_POINT:
             return {...state, correctAnswers: state.correctAnswers + 1};
         case CHANGE_FETCH_STATUS:
