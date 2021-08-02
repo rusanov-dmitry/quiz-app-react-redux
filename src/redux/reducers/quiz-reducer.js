@@ -15,20 +15,19 @@ let initialState = {
 const quizReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_QUESTIONS:
-            debugger;
             let questionCopy = JSON.parse(JSON.stringify(action.questions));
             const htmlEntities = () => {
                 questionCopy.forEach(element => {
-                    element.question.replace(/&amp;/g, '&')
-                    .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+                    element.question = element.question.replace(/&quot;/g, '"')
+                    .replace(/&amp;/g, '&').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
 
-                    element.correct_answer.replace(/&amp;/g, '&')
-                    .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+                    element.correct_answer = element.correct_answer.replace(/&quot;/g, '"')
+                    .replace(/&amp;/g, '&').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
 
                     element.incorrect_answers.forEach(answer => {
-                        answer.replace(/&amp;/g, '&')
-                        .replace(/&quot;/g, '"').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
-                    })
+                        answer = answer.replace(/&quot;/g, '"')
+                    .replace(/&amp;/g, '&').replace(/&#039;/g, '\'').replace(/&rsquo;/g, '’').replace(/&shy;/g, '-');
+                    });
                 });
             }
             htmlEntities();
