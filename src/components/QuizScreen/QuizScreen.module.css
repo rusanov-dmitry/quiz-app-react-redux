@@ -1,5 +1,5 @@
 .content {
-    width: 53rem;
+    width: 90%;
     margin: 6rem auto;
 }
 
@@ -10,4 +10,16 @@
     color: white;
     text-align: start;
     margin: 0rem auto 5rem ;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .content h2 {
+        text-align: center;
+    }
 }

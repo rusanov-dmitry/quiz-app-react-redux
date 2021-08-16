@@ -1,6 +1,6 @@
 .content {
     width: 47.625rem;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .content h1 {
@@ -16,4 +16,14 @@
     grid-template: 100% / 19.75rem 29rem;
     margin-top: 5rem;
     margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .gridContainer {
+        grid-template: 1fr 1fr / 100%;
+    }
 }

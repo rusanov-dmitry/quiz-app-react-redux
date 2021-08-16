@@ -19,3 +19,9 @@
     text-shadow: #702B9B 0.5rem 0.5rem;
     margin-bottom: 5rem;
 }
+
+@media only screen and (max-width: 414px) {
+    .content {
+        margin: 6rem 0.2rem 0;
+    }
+}

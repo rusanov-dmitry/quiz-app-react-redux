@@ -25,3 +25,20 @@
     color: #C69AFF;
     margin-left: 3rem;
 }
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .questionTitle {
+        flex-direction: column-reverse;
+    }
+
+    .counter {
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+}

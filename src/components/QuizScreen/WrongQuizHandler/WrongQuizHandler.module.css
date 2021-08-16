@@ -8,3 +8,9 @@
     line-height: 3rem;
     font-weight: 500;
 }
+
+@media only screen and (max-width: 414px) {
+    .content {
+        margin: 6rem 0.2rem 0;
+    }
+}

@@ -27,3 +27,9 @@
     font-size: 3rem;
     font-weight: 700;
 }
+
+@media only screen and (max-width: 414px) {
+    .content {
+        margin: 6rem 0.2rem 0;
+    }
+}

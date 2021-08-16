@@ -39,3 +39,9 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #472F63;
 }
+
+@media only screen and (max-width: 768px) {
+    .categories {
+        margin-left: 0;
+    }
+}
