@@ -8,9 +8,9 @@ import QuizScreenContainer from './components/QuizScreen/QuizScreenContainer';
 const App = (props) => {
     return (
         <div className='app-wrapper'>
-            <Route path='/welcome' render={ () => <WelcomeScreen /> } />
-            <Route path='/main' render={ () => <MainScreenContainer /> } />
-            <Route path='/quiz' render={ () => <QuizScreenContainer /> } />
+            <Route exact path='/' render={ () => <WelcomeScreen /> } />
+            <Route exact path='/main' render={ () => <MainScreenContainer /> } />
+            <Route exact path='/quiz' render={ () => <QuizScreenContainer /> } />
         </div>
     );
 }
