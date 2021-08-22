@@ -8,7 +8,6 @@
     font-size: 1.375rem;
     font-weight: 700;
     color: white;
-    text-align: start;
     margin: 0rem auto 5rem ;
 }
 
@@ -19,7 +18,11 @@
 }
 
 @media only screen and (max-width: 414px) {
+    .content {
+        margin: 3rem auto;
+    }
+
     .content h2 {
-        text-align: center;
+        margin-bottom: 3rem;
     }
 }

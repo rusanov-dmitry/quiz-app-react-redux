@@ -22,6 +22,14 @@
 
 @media only screen and (max-width: 414px) {
     .content {
-        margin: 6rem 0.2rem 0;
+        margin: 4rem 0.2rem 0;
+    }
+
+    .mainHeader {
+        font-size: 2.5rem;
+    }
+
+    .subheader {
+        font-size: 1.8rem;
     }
 }

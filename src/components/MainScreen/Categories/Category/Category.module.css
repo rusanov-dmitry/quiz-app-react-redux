@@ -32,3 +32,15 @@
     color: #382156;
 }
 
+@media only screen and (max-width: 768px) {
+    .categoryBox label {
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .categoryBox label {
+        text-align: start;
+    }
+}
+
