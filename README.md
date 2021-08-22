@@ -1,6 +1,6 @@
 # TestSelf
 
-> TestSelf is a quiz app built with React + Redux.
+> TestSelf is a quiz app built with React + Redux. You can check it here: https://testself.netlify.app
 
 ## Table of contents
 
